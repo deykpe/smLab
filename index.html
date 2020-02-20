@@ -13,8 +13,8 @@
     <title>smLab</title>
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+<body data-spy="scroll" data-target="#main-nav" id="home">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" id="main-nav">
         <div class="container">
             <a href="index.html" class="navbar-brand">smLab</a>
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -310,6 +310,9 @@
     <script>
         // Get the current year for the copyright
         $('#year').text(new Date().getFullYear());
+
+        //  Init Scrollspy
+        $('body').scrollspy({ target: '#main-nav' });
     </script>
 
 </body>
